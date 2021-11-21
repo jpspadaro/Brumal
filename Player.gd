@@ -25,6 +25,9 @@ func get_input():
 	input_dir = input_dir.normalized()
 	return input_dir
 
+func notify(notification_text):
+	$HUD/Notification_Box/Notification_Text.text = String(notification_text) + "\n" + $HUD/Notification_Box/Notification_Text.text
+
 func _unhandled_input(event):
 	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 		rotation_helper.rotate_x(-event.relative.y * mouse_sensitivity)
@@ -44,3 +47,4 @@ func _physics_process(delta):
 	velocity.z = desired_velocity.z
 	velocity = move_and_slide(velocity, Vector3.UP, true)
 
+	$HUD/PlayerHP_Text.text = String(GameData.Player_HP)

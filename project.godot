@@ -14,6 +14,10 @@ config/name="Brumal"
 run/main_scene="res://Intro.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+GameData="*res://GameData.tscn"
+
 [editor_plugins]
 
 enabled=PoolStringArray( "res://addons/godot-git-control.funabab/plugin.cfg" )
@@ -52,6 +56,11 @@ strafe_right={
 quit={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":81,"unicode":0,"echo":false,"script":null)
+ ]
+}
+test_input={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":84,"unicode":0,"echo":false,"script":null)
  ]
 }
 

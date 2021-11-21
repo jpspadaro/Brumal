@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/Notification.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Fonts/Title Font.tres" type="DynamicFont" id=3]
 
 [sub_resource type="CapsuleMesh" id=1]
 
@@ -65,6 +66,20 @@ custom_fonts/font = ExtResource( 2 )
 text = "WASD to move.
 Use mouse to look around.
 Q quits."
+autowrap = true
+max_lines_visible = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayerHP_Text" type="Label" parent="HUD"]
+margin_left = 827.0
+margin_top = 506.0
+margin_right = 1016.0
+margin_bottom = 596.0
+custom_fonts/font = ExtResource( 3 )
+align = 2
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
