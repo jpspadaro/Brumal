@@ -51,3 +51,6 @@ margin_top = -6.92001
 margin_right = 84.0
 margin_bottom = 7.07999
 text = "Click or space to continue."
+__meta__ = {
+"_edit_use_anchors_": false
+}
