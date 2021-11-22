@@ -48,3 +48,4 @@ func _physics_process(delta):
 	velocity = move_and_slide(velocity, Vector3.UP, true)
 
 	$HUD/PlayerHP_Text.text = String(GameData.Player_HP)
+	$HUD/PlayerWealth_text.text = "Wealth: " + String(GameData.Player_Wealth)

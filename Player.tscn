@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/Notification.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Fonts/Title Font.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Fonts/Body.tres" type="DynamicFont" id=4]
 
 [sub_resource type="CapsuleMesh" id=1]
 
@@ -20,7 +21,9 @@ corner_radius_bottom_left = 10
 shadow_color = Color( 0.0509804, 0.0470588, 0.0470588, 0.6 )
 shadow_size = 4
 
-[node name="Player" type="KinematicBody"]
+[node name="Player" type="KinematicBody" groups=[
+"Player",
+]]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20.9647, 0 )
 script = ExtResource( 1 )
 
@@ -77,6 +80,19 @@ margin_top = 506.0
 margin_right = 1016.0
 margin_bottom = 596.0
 custom_fonts/font = ExtResource( 3 )
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayerWealth_text" type="Label" parent="HUD"]
+margin_left = 822.045
+margin_top = 442.0
+margin_right = 1022.05
+margin_bottom = 494.0
+custom_fonts/font = ExtResource( 4 )
+text = "Wealth:"
 align = 2
 valign = 1
 __meta__ = {
