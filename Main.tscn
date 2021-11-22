@@ -1,10 +1,18 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Main/mountain.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Main/Barrier_wall_mat.tres" type="Material" id=2]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Main.gd" type="Script" id=4]
 [ext_resource path="res://Main/treePineSnow.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Main/snowflake_material.tres" type="Material" id=6]
+
+[sub_resource type="SphereMesh" id=1]
+material = ExtResource( 6 )
+radius = 0.1
+height = 0.5
+radial_segments = 16
+rings = 16
 
 [node name="Main" type="Spatial"]
 script = ExtResource( 4 )
@@ -15,6 +23,7 @@ script = ExtResource( 4 )
 
 [node name="CSGBox2" type="CSGBox" parent="Barrier Wall"]
 transform = Transform( -0.0514295, 0.157532, 0.999999, 0.144609, 99.9998, -0.00157457, -99.9999, 0.144527, -0.000516596, -100.914, 8.72754, -1.18023 )
+use_collision = true
 material = ExtResource( 2 )
 
 [node name="CSGBox2" type="CSGBox" parent="Barrier Wall/CSGBox2"]
@@ -23,6 +32,7 @@ material = ExtResource( 2 )
 
 [node name="CSGBox" type="CSGBox" parent="Barrier Wall"]
 transform = Transform( 100, 0, 0, 0, 100, 0, 0, 0, 1, -2.05917, 6.92824, 99.8851 )
+use_collision = true
 material = ExtResource( 2 )
 
 [node name="CSGBox" type="CSGBox" parent="Barrier Wall/CSGBox"]
@@ -45,3 +55,65 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.124, 30.1481, -23.044 )
 
 [node name="treePineSnow3" parent="Woods" instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.0284, 28.4217, -23.0585 )
+
+[node name="treePineSnow5" parent="Woods" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.68132, 21.9774, -36.5027 )
+
+[node name="treePineSnow6" parent="Woods" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.2727, 9.54517, 7.84774 )
+
+[node name="treePineSnow7" parent="Woods" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.68132, 21.8869, -23.0796 )
+
+[node name="treePineSnow8" parent="Woods" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.7769, 15.0004, -23.0941 )
+
+[node name="treePineSnow9" parent="Woods" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.124, 12.0602, -72.9864 )
+
+[node name="treePineSnow10" parent="Woods" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.53255, 24.7028, -28.636 )
+
+[node name="treePineSnow11" parent="Woods" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.124, 16.0488, -59.5634 )
+
+[node name="treePineSnow12" parent="Woods" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.0284, 16.4124, -59.5779 )
+
+[node name="treePineSnow13" parent="Woods" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.68132, 9.69526, -73.022 )
+
+[node name="treePineSnow14" parent="Woods" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.2727, 13.5247, -28.6717 )
+
+[node name="treePineSnow15" parent="Woods" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.68132, 15.1436, -59.599 )
+
+[node name="treePineSnow16" parent="Woods" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.7769, 14.6531, -59.6135 )
+
+[node name="treePineSnow17" parent="Woods" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20.7749, 31.7686, 23.4844 )
+
+[node name="treePineSnow18" parent="Woods" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.67934, 30.4945, 23.4699 )
+
+[node name="treePineSnow19" parent="Woods" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.03038, 18.6021, 10.0257 )
+
+[node name="treePineSnow20" parent="Woods" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.6218, 17.8354, 54.3761 )
+
+[node name="treePineSnow21" parent="Woods" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.06851, 21.4076, 23.435 )
+
+[node name="treePineSnow22" parent="Woods" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.1259, 16.4631, 23.4342 )
+
+[node name="Snow" type="CPUParticles" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0910988, 49.7421, 0.0705338 )
+amount = 80
+lifetime = 3.0
+mesh = SubResource( 1 )
+emission_shape = 2
+emission_box_extents = Vector3( 50, 1, 50 )

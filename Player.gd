@@ -16,7 +16,7 @@ func get_input():
 	# desired move in camera direction
 	if Input.is_action_pressed("move_forward"):
 		input_dir += -camera.global_transform.basis.z
-	if Input.is_action_pressed("move_back"):
+	if Input.is_action_pressed("move_backward"):
 		input_dir += camera.global_transform.basis.z
 	if Input.is_action_pressed("strafe_left"):
 		input_dir += -camera.global_transform.basis.x
