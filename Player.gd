@@ -25,8 +25,6 @@ func get_input():
 	input_dir = input_dir.normalized()
 	return input_dir
 
-func notify(notification_text):
-	$HUD/Notification_Box/Notification_Text.text = String(notification_text) + "\n" + $HUD/Notification_Box/Notification_Text.text
 
 func _unhandled_input(event):
 	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
@@ -49,3 +47,5 @@ func _physics_process(delta):
 
 	$HUD/PlayerHP_Text.text = String(GameData.Player_HP)
 	$HUD/PlayerWealth_text.text = "Wealth: " + String(GameData.Player_Wealth)
+	$HUD/Notification_Box/Notification_Text.text = GameData.notifications
+	
