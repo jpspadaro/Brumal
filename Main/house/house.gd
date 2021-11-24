@@ -18,4 +18,5 @@ func _ready():
 
 func _on_Area_body_entered(body):
 	if body.is_in_group("Player"):
+		GameData.notify("Entering cabin.")
 		get_tree().change_scene("res://House_Interior.tscn")

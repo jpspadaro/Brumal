@@ -40,9 +40,8 @@ material = ExtResource( 2 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0441454, -200.449 )
 material = ExtResource( 2 )
 
-[node name="Player" parent="." groups=[
-"Player",
-] instance=ExtResource( 3 )]
+[node name="Player" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.35916, 28.0929, 14.37 )
 visible = false
 
 [node name="Woods" type="Spatial" parent="."]
