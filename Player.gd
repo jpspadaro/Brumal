@@ -22,6 +22,8 @@ func get_input():
 		input_dir += -camera.global_transform.basis.x
 	if Input.is_action_pressed("strafe_right"):
 		input_dir += camera.global_transform.basis.x
+	if Input.is_action_just_released("pickup"):
+		pick_up()
 	input_dir = input_dir.normalized()
 	return input_dir
 
@@ -35,6 +37,13 @@ func _unhandled_input(event):
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
+func pick_up():
+	if $RotationHelper/Camera/RayCast.is_colliding():
+			GameData.pick_up($RotationHelper/Camera/RayCast.get_collider())
+	else:
+			GameData.notify("There is nothing there!")
+
 
 
 func _physics_process(delta):
