@@ -55,8 +55,18 @@ func _physics_process(delta):
 	velocity.z = desired_velocity.z
 	velocity = move_and_slide(velocity, Vector3.UP, true)
 
+	if GameData.Player_HP < 1:
+		GameData.notify("You fall unconscious...when you awaken again your are in the cabin.")
+		get_tree().change_scene("res://House_Interior.tscn")
+		GameData.Player_HP = 50
+
+
 	$HUD/VBoxContainer/PlayerHP_Text.text = String(GameData.Player_HP)
 	$HUD/VBoxContainer/PlayerWealth_text.text = "Wealth: " + String(GameData.Player_Wealth)
 	$HUD/Notification_Box/Notification_Text.text = GameData.notifications
 	$HUD/HeldItem_Text.text = GameData.inv_list[GameData.inv_held]
+	if GameData.inv_description.has(GameData.inv_list[GameData.inv_held]):
+		$HUD/HeldItem_Desc.text = GameData.inv_description[GameData.inv_list[GameData.inv_held]]
+	else:
+		$HUD/HeldItem_Desc.text = ""
 	

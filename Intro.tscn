@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Fonts/Title Font.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Intro.gd" type="Script" id=2]
+[ext_resource path="res://Fonts/FancyBody.tres" type="DynamicFont" id=3]
 
 [node name="Intro" type="Control"]
 anchor_right = 1.0
@@ -28,10 +29,10 @@ anchor_left = 0.517
 anchor_top = 0.422
 anchor_right = 0.517
 anchor_bottom = 0.422
-margin_left = -289.088
-margin_top = -140.08
-margin_right = 288.912
-margin_bottom = 142.08
+margin_left = -286.71
+margin_top = -203.108
+margin_right = 291.29
+margin_bottom = 79.052
 custom_fonts/font = ExtResource( 1 )
 text = "Brumal
 Liber Avaritiae"
@@ -46,11 +47,34 @@ anchor_left = 0.522
 anchor_top = 0.578
 anchor_right = 0.522
 anchor_bottom = 0.578
-margin_left = -84.0
-margin_top = -6.92001
-margin_right = 84.0
-margin_bottom = 7.07999
+margin_left = -87.5676
+margin_top = -72.3264
+margin_right = 81.4324
+margin_bottom = -58.3264
 text = "Click or space to continue."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="ColorRect"]
+margin_left = -1.56763
+margin_top = 348.053
+margin_right = 1062.43
+margin_bottom = 540.053
+
+[node name="Storyline" type="Label" parent="ColorRect/Panel"]
+anchor_left = 0.519
+anchor_top = 0.261
+anchor_right = 0.519
+anchor_bottom = 0.261
+margin_left = -308.671
+margin_top = -46.197
+margin_right = 309.329
+margin_bottom = 142.803
+custom_fonts/font = ExtResource( 3 )
+text = "After killing your companions for the book, you head to the cabin. Other worldly treasure will be yours and yours alone."
+align = 1
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }

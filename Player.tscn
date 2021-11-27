@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/Notification.tres" type="DynamicFont" id=2]
-[ext_resource path="res://Fonts/Title Font.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Fonts/FancyBody.tres" type="DynamicFont" id=3]
 [ext_resource path="res://Fonts/Body.tres" type="DynamicFont" id=4]
 
 [sub_resource type="CapsuleMesh" id=1]
@@ -111,7 +111,7 @@ __meta__ = {
 [node name="PlayerHP_Text" type="Label" parent="HUD/VBoxContainer"]
 margin_top = 25.0
 margin_right = 90.0
-margin_bottom = 115.0
+margin_bottom = 86.0
 custom_fonts/font = ExtResource( 3 )
 align = 2
 valign = 1
@@ -120,13 +120,24 @@ __meta__ = {
 }
 
 [node name="HeldItem_Text" type="Label" parent="HUD"]
-margin_left = 404.0
-margin_top = 552.0
-margin_right = 681.0
-margin_bottom = 602.0
+margin_left = 389.996
+margin_top = 500.822
+margin_right = 666.996
+margin_bottom = 550.822
 custom_fonts/font = ExtResource( 4 )
 align = 1
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HeldItem_Desc" type="Label" parent="HUD"]
+margin_left = 33.8108
+margin_top = 533.297
+margin_right = 988.811
+margin_bottom = 594.297
+custom_fonts/font = ExtResource( 3 )
+align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }

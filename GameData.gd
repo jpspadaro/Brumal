@@ -10,6 +10,10 @@ export var inv_list = ["Liber Avaritiae"]
 var inv_list_all = ["Liber Avaritiae"] #Includes items previously used. 
 #Initialized the same to prevent pass by reference later
 
+var inv_description = {"Liber Avaritiae":"A mystical tome leading to riches.",
+	"Test Box": "A sacred artifact of debugging."
+	}
+
 var inv_held = 0
 
 func _ready():
