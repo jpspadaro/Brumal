@@ -5,7 +5,7 @@
 [ext_resource path="res://Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Main.gd" type="Script" id=4]
 [ext_resource path="res://Main/treePineSnow.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Main/snowflake_material.tres" type="Material" id=6]
+[ext_resource path="res://original_models/terrain/Material.material" type="Material" id=6]
 [ext_resource path="res://Main/house/house.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Main/RelicOfTongratell.tscn" type="PackedScene" id=8]
 
@@ -49,70 +49,70 @@ visible = false
 [node name="Woods" type="Spatial" parent="."]
 
 [node name="treePineSnow" parent="Woods" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.124, 29.0302, -36.467 )
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -22.124, 29.0302, -36.467 )
 
 [node name="treePineSnow4" parent="Woods" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.53255, 27.6233, 7.88335 )
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -7.53255, 27.6233, 7.88335 )
 
 [node name="treePineSnow2" parent="Woods" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.124, 30.1481, -23.044 )
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -22.124, 30.1481, -23.044 )
 
 [node name="treePineSnow3" parent="Woods" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.0284, 28.4217, -23.0585 )
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -11.0284, 28.4217, -23.0585 )
 
 [node name="treePineSnow5" parent="Woods" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.68132, 21.9774, -36.5027 )
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 1.68132, 21.9774, -36.5027 )
 
 [node name="treePineSnow6" parent="Woods" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.2727, 9.54517, 7.84774 )
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 16.2727, 9.54517, 7.84774 )
 
 [node name="treePineSnow7" parent="Woods" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.68132, 21.8869, -23.0796 )
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 1.68132, 21.8869, -23.0796 )
 
 [node name="treePineSnow8" parent="Woods" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.7769, 15.0004, -23.0941 )
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 12.7769, 15.0004, -23.0941 )
 
 [node name="treePineSnow9" parent="Woods" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.124, 12.0602, -72.9864 )
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -22.124, 12.0602, -72.9864 )
 
 [node name="treePineSnow10" parent="Woods" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.53255, 24.7028, -28.636 )
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -7.53255, 24.7028, -28.636 )
 
 [node name="treePineSnow11" parent="Woods" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.124, 16.0488, -59.5634 )
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -22.124, 16.0488, -59.5634 )
 
 [node name="treePineSnow12" parent="Woods" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.0284, 16.4124, -59.5779 )
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -11.0284, 16.4124, -59.5779 )
 
 [node name="treePineSnow13" parent="Woods" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.68132, 9.69526, -73.022 )
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 1.68132, 9.69526, -73.022 )
 
 [node name="treePineSnow14" parent="Woods" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.2727, 13.5247, -28.6717 )
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 16.2727, 13.5247, -28.6717 )
 
 [node name="treePineSnow15" parent="Woods" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.68132, 15.1436, -59.599 )
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 1.68132, 15.1436, -59.599 )
 
 [node name="treePineSnow16" parent="Woods" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.7769, 14.6531, -59.6135 )
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 12.7769, 14.6531, -59.6135 )
 
 [node name="treePineSnow17" parent="Woods" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20.7749, 31.7686, 23.4844 )
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -20.7749, 31.7686, 23.4844 )
 
 [node name="treePineSnow18" parent="Woods" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.67934, 28.5894, 27.092 )
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -9.67934, 28.5894, 27.092 )
 
 [node name="treePineSnow19" parent="Woods" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.03038, 18.6021, 10.0257 )
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 3.03038, 18.6021, 10.0257 )
 
 [node name="treePineSnow20" parent="Woods" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.6218, 17.8354, 54.3761 )
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 17.6218, 17.8354, 54.3761 )
 
 [node name="treePineSnow21" parent="Woods" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.06851, 21.4076, 23.435 )
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 3.06851, 21.4076, 23.435 )
 
 [node name="treePineSnow22" parent="Woods" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.1259, 16.4631, 23.4342 )
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 14.1259, 16.4631, 23.4342 )
 
 [node name="Snow" type="CPUParticles" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0910988, 49.7421, 0.0705338 )
@@ -126,4 +126,4 @@ emission_box_extents = Vector3( 50, 1, 50 )
 transform = Transform( -0.46899, 0, -0.173345, 0, 0.5, 0, 0.173345, 0, -0.46899, -10.9897, 25.1496, 18.5276 )
 
 [node name="RelicOfTongratell" parent="." instance=ExtResource( 8 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 23.2866, -40.8363 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 24.8712, -41.8363 )

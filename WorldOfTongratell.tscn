@@ -9,16 +9,16 @@
 [node name="WorldOfTongratell" type="Spatial"]
 
 [node name="house" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.350517, 0, -0.356564, 0, 0.5, 0, 0.356564, 0, 0.350517, 44.5336, 7.29382, -10.7992 )
+transform = Transform( 0.175258, 0, -0.178282, 0, 0.25, 0, 0.178282, 0, 0.175258, 44.5336, 8.13014, -10.7992 )
 
 [node name="Landscape" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.243294, -2.07505, 0.027771 )
-
-[node name="Player" parent="Landscape" instance=ExtResource( 3 )]
-transform = Transform( -0.319174, 0, 0.947696, 0, 1, 0, -0.947696, 0, -0.319174, 43.9528, 10.7865, -19.555 )
 
 [node name="StaticBody" type="StaticBody" parent="."]
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
 transform = Transform( 80, 0, 0, 0, 1, 0, 0, 0, 80, 0, 71.2309, 0 )
 shape = SubResource( 1 )
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+transform = Transform( -0.319174, 0, 0.947696, 0, 1, 0, -0.947696, 0, -0.319174, 43.7095, 8.71149, -19.5272 )
