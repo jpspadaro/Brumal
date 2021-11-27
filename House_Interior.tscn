@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://House_Interior.gd" type="Script" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://House_Interior/Door.tscn" type="PackedScene" id=4]
 [ext_resource path="res://House_Interior/Fireplace.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Test Box.gd" type="Script" id=6]
+[ext_resource path="res://House_Interior/Portal.tscn" type="PackedScene" id=7]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -41,3 +42,6 @@ material/0 = null
 
 [node name="CollisionShape" type="CollisionShape" parent="Test Box"]
 shape = SubResource( 2 )
+
+[node name="Portal" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.85753, 0.575, -3.38356 )

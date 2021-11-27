@@ -1,0 +1,71 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://House_Interior/Stone.tres" type="Material" id=1]
+[ext_resource path="res://House_Interior/Portal_Area.gd" type="Script" id=2]
+[ext_resource path="res://House_Interior/Portal.gd" type="Script" id=3]
+
+[sub_resource type="CylinderMesh" id=1]
+material = ExtResource( 1 )
+top_radius = 1.75
+bottom_radius = 2.0
+height = 0.25
+
+[sub_resource type="ConvexPolygonShape" id=2]
+points = PoolVector3Array( -1.96344, -0.105206, -0.242945, -1.96343, -0.105206, 0.242944, -1.89674, -0.105103, 0.567249, -1.82809, -0.104871, 0.760023, -1.82809, -0.104871, -0.760023, -1.79248, -0.125, -0.221793, -1.78323, 0.158333, 0.016187, -1.74967, 0.158333, -0.349798, -1.71651, 0.158333, 0.483242, -1.64979, 0.158333, -0.683014, -1.51635, 0.158333, 0.949902, -1.50828, -0.105146, 1.28093, -1.50827, -0.105146, -1.28092, -1.44963, 0.158333, -1.04979, -1.43664, -0.125, -1.11072, -1.43664, -0.125, 1.11072, -1.18314, 0.158333, 1.34945, -1.11644, -0.104877, 1.63397, -1.11644, -0.104877, -1.63397, -1.0497, 0.158333, -1.44973, -1.0497, 0.158333, 1.44973, -0.891246, -0.105046, -1.76615, -0.760235, -0.104857, 1.82797, -0.682937, 0.158333, -1.64989, -0.682937, 0.158333, 1.64989, -0.567149, -0.105097, -1.89676, -0.400001, -0.125, -1.76276, -0.349731, 0.158333, -1.74978, -0.349731, 0.158333, 1.74978, -0.243245, -0.105197, 1.96338, -0.243244, -0.105196, -1.96337, -0.22208, -0.125, 1.79259, 0.0166385, 0.158333, -1.78294, 0.0166385, 0.158333, 1.78294, 0.243357, -0.105196, -1.96336, 0.349845, 0.158333, -1.74978, 0.399764, -0.125, -1.76276, 0.437514, -0.105111, 1.92924, 0.683051, 0.158333, -1.64989, 0.683051, 0.158333, 1.64989, 0.760329, -0.104854, -1.82792, 0.760329, -0.104854, 1.82792, 0.949932, 0.158333, 1.51645, 1.04982, 0.158333, -1.44973, 1.14057, -0.125, -1.40726, 1.14057, -0.125, 1.40726, 1.24632, -0.104932, 1.53774, 1.24632, -0.104932, -1.53774, 1.34986, 0.158333, 1.18284, 1.44974, 0.158333, -1.04939, 1.51646, 0.158333, 0.949507, 1.55385, -0.0717277, 1.16898, 1.6499, 0.158333, -0.683014, 1.6499, 0.158333, 0.683014, 1.67399, -0.125, -0.695911, 1.69554, -0.104662, -1.01724, 1.74979, 0.158333, -0.349798, 1.74979, 0.158333, 0.349798, 1.78334, 0.158333, 0.0165818, 1.7926, -0.125, 0.221793, 1.8281, -0.104864, 0.759981, 1.89674, -0.105096, -0.567216, 1.96342, -0.105199, -0.242929, 1.96343, -0.105199, 0.24293 )
+
+[sub_resource type="OpenSimplexNoise" id=3]
+octaves = 8
+period = 96.6
+persistence = 0.615
+lacunarity = 2.49
+
+[sub_resource type="NoiseTexture" id=4]
+noise = SubResource( 3 )
+
+[sub_resource type="GradientTexture" id=5]
+
+[sub_resource type="SpatialMaterial" id=6]
+albedo_color = Color( 0.592157, 0.0196078, 0.0196078, 1 )
+albedo_texture = SubResource( 4 )
+emission_enabled = true
+emission = Color( 0.215686, 0, 0, 1 )
+emission_energy = 6.45
+emission_operator = 1
+emission_on_uv2 = false
+emission_texture = SubResource( 5 )
+ao_enabled = true
+ao_light_affect = 0.0
+ao_on_uv2 = false
+ao_texture_channel = 0
+transmission_enabled = true
+transmission = Color( 0.745098, 0.0509804, 0.0509804, 1 )
+
+[sub_resource type="CubeMesh" id=7]
+material = SubResource( 6 )
+size = Vector3( 2, 0.25, 2 )
+
+[sub_resource type="SphereShape" id=8]
+radius = 3.0
+
+[node name="Portal" type="StaticBody"]
+script = ExtResource( 3 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 2 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0233891, 0 )
+mesh = SubResource( 7 )
+material/0 = null
+
+[node name="Portal_Area" type="Area" parent="."]
+script = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Portal_Area"]
+shape = SubResource( 8 )
+
+[connection signal="body_entered" from="Portal_Area" to="." method="_on_Portal_Area_body_entered"]

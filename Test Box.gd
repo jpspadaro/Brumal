@@ -8,7 +8,7 @@ var inv_id = "Test Box"
 func _ready():
 	
 	#Inventory check...does it exist in the player inventory? if so, remove it.
-	if inv_id in GameData.inv_list:
+	if inv_id in GameData.inv_list_all:
 		queue_free()
 
 

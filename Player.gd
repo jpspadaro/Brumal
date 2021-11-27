@@ -40,9 +40,10 @@ func _ready():
 
 func pick_up():
 	if $RotationHelper/Camera/RayCast.is_colliding():
-			GameData.pick_up($RotationHelper/Camera/RayCast.get_collider())
+		print ("Raycast. Colliding with " + $RotationHelper/Camera/RayCast.get_collider().name)
+		GameData.pick_up($RotationHelper/Camera/RayCast.get_collider())
 	else:
-			GameData.notify("There is nothing there!")
+		GameData.notify("There is nothing there!")
 
 
 
@@ -57,4 +58,5 @@ func _physics_process(delta):
 	$HUD/VBoxContainer/PlayerHP_Text.text = String(GameData.Player_HP)
 	$HUD/VBoxContainer/PlayerWealth_text.text = "Wealth: " + String(GameData.Player_Wealth)
 	$HUD/Notification_Box/Notification_Text.text = GameData.notifications
+	$HUD/HeldItem_Text.text = GameData.inv_list[GameData.inv_held]
 	

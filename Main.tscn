@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Main/mountain.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Main/Barrier_wall_mat.tres" type="Material" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Main/treePineSnow.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Main/snowflake_material.tres" type="Material" id=6]
 [ext_resource path="res://Main/house/house.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Main/RelicOfTongratell.tscn" type="PackedScene" id=8]
 
 [sub_resource type="SphereMesh" id=1]
 material = ExtResource( 6 )
@@ -19,6 +20,7 @@ rings = 16
 script = ExtResource( 4 )
 
 [node name="mountain" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0882931, 0, -0.014534 )
 
 [node name="Barrier Wall" type="Spatial" parent="."]
 
@@ -122,3 +124,6 @@ emission_box_extents = Vector3( 50, 1, 50 )
 
 [node name="house" parent="." instance=ExtResource( 7 )]
 transform = Transform( -0.46899, 0, -0.173345, 0, 0.5, 0, 0.173345, 0, -0.46899, -10.9897, 25.1496, 18.5276 )
+
+[node name="RelicOfTongratell" parent="." instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 23.2866, -40.8363 )
