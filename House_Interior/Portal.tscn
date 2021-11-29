@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://House_Interior/Stone.tres" type="Material" id=1]
 [ext_resource path="res://House_Interior/Portal_Area.gd" type="Script" id=2]
 [ext_resource path="res://House_Interior/Portal.gd" type="Script" id=3]
+[ext_resource path="res://Sounds/outsideroar.wav" type="AudioStream" id=4]
 
 [sub_resource type="CylinderMesh" id=1]
 material = ExtResource( 1 )
@@ -67,5 +68,8 @@ script = ExtResource( 2 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Portal_Area"]
 shape = SubResource( 8 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Portal_Area"]
+stream = ExtResource( 4 )
 
 [connection signal="body_entered" from="Portal_Area" to="." method="_on_Portal_Area_body_entered"]

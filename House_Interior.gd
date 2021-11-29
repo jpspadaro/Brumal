@@ -11,9 +11,9 @@ func _ready():
 	pass
 
 func _unhandled_input(event):
-	if event.is_action_pressed("test_input"):
-		GameData.notify("Test Notification.")
-		GameData.Player_HP -= 1
+	#if event.is_action_pressed("test_input"):
+	#	GameData.notify("Test Notification.")
+	#	GameData.Player_HP -= 1
 	if event.is_action_pressed("quit"):
 		get_tree().quit()
 

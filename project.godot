@@ -12,7 +12,8 @@ config_version=4
 
 config/name="Brumal"
 run/main_scene="res://Intro.tscn"
-config/icon="res://icon.png"
+boot_splash/image="res://Images/Loading.png"
+config/icon="res://Images/Loading.png"
 
 [autoload]
 

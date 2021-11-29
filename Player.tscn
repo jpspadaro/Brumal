@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/Notification.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Fonts/FancyBody.tres" type="DynamicFont" id=3]
 [ext_resource path="res://Fonts/Body.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Sounds/footsteps.wav" type="AudioStream" id=5]
 
 [sub_resource type="CapsuleMesh" id=1]
 
@@ -141,3 +142,8 @@ align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5395, 0 )
+stream = ExtResource( 5 )
+unit_db = 1.65

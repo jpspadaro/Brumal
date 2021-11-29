@@ -11,3 +11,5 @@ stream = ExtResource( 2 )
 autoplay = true
 
 [node name="Inventory" type="Spatial" parent="."]
+
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_finished"]

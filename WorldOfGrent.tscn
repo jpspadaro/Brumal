@@ -1,0 +1,43 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://WorldOfGrent/landscape.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Main/house/house.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Coin.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Chest.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Sounds/spooky-wind.wav" type="AudioStream" id=6]
+[ext_resource path="res://WorldOfGrent.gd" type="Script" id=7]
+
+[node name="WorldOfGrent" type="Spatial"]
+script = ExtResource( 7 )
+
+[node name="landscape" parent="." instance=ExtResource( 2 )]
+transform = Transform( 20, 0, 0, 0, 20, 0, 0, 0, 20, -49.2489, 36.6827, -14.1973 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 61.0777, 404.264, -53.4325 )
+
+[node name="house" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.28944, 0, 0.196785, 0, 0.35, 0, -0.196785, 0, 0.28944, 75.243, 401.884, -64.692 )
+
+[node name="OmniLight" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -34.1304, 1945.67, -4.49057 )
+light_energy = 9.95
+shadow_enabled = true
+omni_range = 5000.0
+
+[node name="Chest" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 232.318, 403.898, 193.598 )
+
+[node name="Coin" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 34.1655, 402.922, 2.89194 )
+
+[node name="Coin2" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 107.218, 402.955, -54.2767 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+pitch_scale = 2.28
+autoplay = true
+
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_finished"]

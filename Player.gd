@@ -16,12 +16,20 @@ func get_input():
 	# desired move in camera direction
 	if Input.is_action_pressed("move_forward"):
 		input_dir += -camera.global_transform.basis.z
+		if not $AudioStreamPlayer3D.playing:
+			$AudioStreamPlayer3D.play()
 	if Input.is_action_pressed("move_backward"):
 		input_dir += camera.global_transform.basis.z
+		if not $AudioStreamPlayer3D.playing:
+			$AudioStreamPlayer3D.play()
 	if Input.is_action_pressed("strafe_left"):
 		input_dir += -camera.global_transform.basis.x
+		if not $AudioStreamPlayer3D.playing:
+			$AudioStreamPlayer3D.play()
 	if Input.is_action_pressed("strafe_right"):
 		input_dir += camera.global_transform.basis.x
+		if not $AudioStreamPlayer3D.playing:
+			$AudioStreamPlayer3D.play()
 	if Input.is_action_just_released("pickup"):
 		pick_up()
 	input_dir = input_dir.normalized()
