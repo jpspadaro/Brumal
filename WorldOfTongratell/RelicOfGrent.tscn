@@ -51,10 +51,7 @@ normal_texture = SubResource( 4 )
 [sub_resource type="BoxShape" id=8]
 extents = Vector3( 5, 8, 5 )
 
-[node name="RelicOfGrent" type="RigidBody" groups=[
-"Items",
-"Relics",
-]]
+[node name="RelicOfGrent" type="RigidBody" groups=["Items", "Relics"]]
 script = ExtResource( 1 )
 
 [node name="Torus" type="MeshInstance" parent="."]

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/monsterGrowl.wav-2daf9fa37941d5e77b3f120248bfe13e.sample"
+
+[deps]
+
+source_file="res://Sounds/monsterGrowl.wav"
+dest_files=[ "res://.import/monsterGrowl.wav-2daf9fa37941d5e77b3f120248bfe13e.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

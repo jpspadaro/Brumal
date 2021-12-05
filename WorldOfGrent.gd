@@ -1,5 +1,6 @@
 extends Spatial
 
+var enemy_path
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -12,8 +13,10 @@ func _ready():
 
 
 
-func _process(delta):
-	pass
+func _physics_process(delta):
+	enemy_path = $ShadowSheet.global_transform.origin - $Player.global_transform.origin
+	#print("Next Path: " + String(enemy_path))
+	$ShadowSheet.set_target(enemy_path)
 
 
 

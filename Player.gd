@@ -6,7 +6,7 @@ onready var camera = $RotationHelper/Camera
 onready var rotation_helper = $RotationHelper
 
 export var gravity = -30
-export var max_speed = 8
+var max_speed = GameData.Player_Speed
 var mouse_sensitivity = 0.002  # radians/pixel
 
 var velocity = Vector3()
@@ -48,7 +48,7 @@ func _ready():
 
 func pick_up():
 	if $RotationHelper/Camera/RayCast.is_colliding():
-		print ("Raycast. Colliding with " + $RotationHelper/Camera/RayCast.get_collider().name)
+		# print ("Raycast. Colliding with " + $RotationHelper/Camera/RayCast.get_collider().name)
 		GameData.pick_up($RotationHelper/Camera/RayCast.get_collider())
 	else:
 		GameData.notify("There is nothing there!")
@@ -59,6 +59,9 @@ func _physics_process(delta):
 	velocity.y += gravity * delta
 	var desired_velocity = get_input() * max_speed
 
+	if GameData.Player_HP < 50:
+		desired_velocity = desired_velocity / 2
+
 	velocity.x = desired_velocity.x
 	velocity.z = desired_velocity.z
 	velocity = move_and_slide(velocity, Vector3.UP, true)
@@ -66,6 +69,13 @@ func _physics_process(delta):
 	if GameData.Player_HP < 1:
 		GameData.notify("You fall unconscious...when you awaken again your are in the cabin.")
 		get_tree().change_scene("res://House_Interior.tscn")
+		
+		if GameData.Player_Wealth > 10:
+			GameData.death_audio()
+			GameData.Player_Speed -= 1
+			if GameData.Player_Speed < 1:
+				get_tree().change_scene("res://LoseGame.tscn")
+			GameData.notify("Your skin hardens, making it harder to move!")
 		GameData.Player_HP = 50
 
 

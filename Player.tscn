@@ -22,9 +22,7 @@ corner_radius_bottom_left = 10
 shadow_color = Color( 0.0509804, 0.0470588, 0.0470588, 0.6 )
 shadow_size = 4
 
-[node name="Player" type="KinematicBody" groups=[
-"Player",
-]]
+[node name="Player" type="KinematicBody" groups=["Player"]]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20.9647, 0 )
 script = ExtResource( 1 )
 

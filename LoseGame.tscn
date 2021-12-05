@@ -1,0 +1,88 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Fonts/FancyBody.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Fonts/Title Font.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Images/Untitled.png" type="Texture" id=3]
+[ext_resource path="res://Score.gd" type="Script" id=4]
+[ext_resource path="res://LoseGame.gd" type="Script" id=5]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 40.0
+margin_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="ColorRect"]
+position = Vector2( 532.358, 319.913 )
+scale = Vector2( 0.740141, 0.734145 )
+texture = ExtResource( 3 )
+
+[node name="Title" type="Label" parent="ColorRect"]
+anchor_left = 0.519
+anchor_top = 0.406
+anchor_right = 0.519
+anchor_bottom = 0.406
+margin_left = -295.348
+margin_top = -215.71
+margin_right = 282.652
+margin_bottom = 66.4498
+custom_fonts/font = ExtResource( 2 )
+text = "YOU'VE LOST,
+a victim of your own greed.
+Was it worth it?"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Instructions" type="Label" parent="ColorRect"]
+anchor_left = 0.522
+anchor_top = 0.578
+anchor_right = 0.522
+anchor_bottom = 0.578
+margin_left = -108.101
+margin_top = -44.6081
+margin_right = 108.899
+margin_bottom = -30.6081
+text = "Click or space to replay. Q to quit."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="ColorRect"]
+margin_left = -1.56763
+margin_top = 348.053
+margin_right = 1062.43
+margin_bottom = 540.053
+
+[node name="Score" type="Label" parent="ColorRect/Panel"]
+anchor_left = 0.519
+anchor_top = 0.261
+anchor_right = 0.519
+anchor_bottom = 0.261
+margin_left = -308.671
+margin_top = -46.197
+margin_right = 309.329
+margin_bottom = 142.803
+custom_fonts/font = ExtResource( 1 )
+align = 1
+autowrap = true
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

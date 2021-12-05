@@ -21,12 +21,16 @@ func _on_Portal_Area_body_entered(body):
 		if GameData.inv_list[GameData.inv_held] == "Liber Avaritiae":
 			GameData.current_world = "res://Main.tscn"
 			GameData.notify("The world around you seems familiar.")
-			$Portal_Area/AudioStreamPlayer.play()
+			$Portal_Area/AudioStreamPlayer.play(23.0)
 		if GameData.inv_list[GameData.inv_held] == "Relic Of Tongratell":
 			GameData.current_world = "res://WorldOfTongratell.tscn"
 			GameData.notify("The world outside roars. You feel like you are in a different place.")
-			$Portal_Area/AudioStreamPlayer.play()
+			$Portal_Area/AudioStreamPlayer.play(23.0)
 		if GameData.inv_list[GameData.inv_held] == "Relic Of Grent":
 			GameData.current_world = "res://WorldOfGrent.tscn"
 			GameData.notify("The world outside screams, then is deathly silent. You feel like you are in a different place.")
-			$Portal_Area/AudioStreamPlayer.play()
+			$Portal_Area/AudioStreamPlayer.play(23.0)
+		if GameData.inv_list[GameData.inv_held] == "Relic Of Nul":
+			GameData.current_world = "res://WorldOfNul.tscn"
+			GameData.notify("The world outside storms, then goes quiet. You feel like you are in a different place.")
+			$Portal_Area/AudioStreamPlayer.play(23.0)
