@@ -8,7 +8,7 @@ var notifications = "WASD to move.\nUse mouse to look around. Clicking picks up 
 var current_world = "res://Main.tscn"
 
 export var inv_list = ["Liber Avaritiae"]
-var inv_list_all = ["Liber Avaritiae"] #Includes items previously used. 
+var inv_list_all = [0] #Includes items previously used. 
 #Initialized the same to prevent pass by reference later
 
 var inv_description = {"Liber Avaritiae":"A mystical tome leading to riches, and also providing the way home.",
@@ -54,7 +54,7 @@ func notify(notification_text):
 func pick_up(node):
 	if node.is_in_group("Items"):
 		inv_list.append(node.inv_id)
-		inv_list_all.append(node.inv_id)
+		inv_list_all.append(node.inv_u_id)
 		if node.is_in_group("Relics"):
 			add_relic()
 		notify(node.inv_id + " has been picked up.")
@@ -80,6 +80,9 @@ func use_item():
 		Player_Wealth += 1
 		inv_list.remove(inv_held)
 		inv_held = 0
+	if inv_list[inv_held] == "Mogdar's Bauble":
+		get_tree().change_scene("res://House_Interior.tscn")
+		Player_HP -= 25
 
 func death_audio():
 	$DeathAudioStreamPlayer.play()
@@ -98,7 +101,7 @@ func reset_game():
 	current_world = "res://Main.tscn"
 
 	inv_list = ["Liber Avaritiae"]
-	inv_list_all = ["Liber Avaritiae"] #Includes items previously used. 
+	inv_list_all = [0] #Includes items previously used. 
 	#Initialized the same to prevent pass by reference later
 
 	inv_held = 0

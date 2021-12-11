@@ -24,13 +24,13 @@ func _physics_process(delta):
 	
 	desired_velocity = -target.normalized()
 	# desired_velocity.y += gravity * delta
-	print ("Shadow Target:" + String(target))
+	print_debug ("Shadow Target:" + String(target))
 	desired_velocity = desired_velocity * Speed
 		
 	velocity = desired_velocity
 	
 
-	print ("Velocity: " + String(velocity))
+	print_debug ("Velocity: " + String(velocity))
 	velocity = move_and_slide(velocity, Vector3.UP, true)
 
 

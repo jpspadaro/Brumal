@@ -7,9 +7,7 @@
 
 [sub_resource type="BoxShape" id=2]
 
-[node name="Coin" type="RigidBody" groups=[
-"Items",
-]]
+[node name="Coin" type="RigidBody" groups=["Items"]]
 script = ExtResource( 2 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]

@@ -10,7 +10,7 @@ export var Speed = 8
 var gravity = -9.8
 
 var target_found = false
-var target_node
+var target_node = self
 var target = global_transform.origin
 
 # Called when the node enters the scene tree for the first time.
@@ -30,13 +30,13 @@ func _physics_process(delta):
 	
 	desired_velocity = -target.normalized()
 	# desired_velocity.y += gravity * delta
-	print ("Beast Target:" + String(target))
+	#print_debug ("Beast Target:" + String(target))
 	desired_velocity = desired_velocity * Speed
 		
 	velocity = desired_velocity
 	
 
-	print ("Velocity: " + String(velocity))
+	#print_debug ("Velocity: " + String(velocity))
 	velocity = move_and_slide(velocity, Vector3.UP, true)
 
 
