@@ -15,8 +15,8 @@ func _ready():
 func _on_SkinAnimation_animation_finished():
 	$SkinAnimation.play("Skin")
 
-#func _on_FloatAnimation_animation_finished():
-#	$FloatAnimation.play("Float")
+func _on_FloatAnimation_animation_finished():
+	$FloatAnimation.play("Float")
 
 func _on_Area_body_entered(body):
 	if body.is_in_group("Player"):
