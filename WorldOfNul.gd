@@ -9,8 +9,7 @@ extends Spatial
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	print_debug("WorldOfNul Loaded.")
+	$MogdarTheUndying/AnimationPlayer.play("Float")
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _on_AnimationPlayer_animation_finished(anim):
+	$MogdarTheUndying/AnimationPlayer.play(anim)
