@@ -1,10 +1,13 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Main/house/house.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://WorldOfNul/Landscape.tscn" type="PackedScene" id=3]
 [ext_resource path="res://WorldOfNul.gd" type="Script" id=4]
 [ext_resource path="res://WorldOfNul/MogdarTheUndying.tscn" type="PackedScene" id=5]
+[ext_resource path="res://WorldOfNul/Bridge.tscn" type="PackedScene" id=6]
+[ext_resource path="res://beast.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Chest.tscn" type="PackedScene" id=8]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Float"
@@ -151,5 +154,28 @@ transform = Transform( -0.983716, 0, 0.179729, 0, 1, 0, -0.179729, 0, -0.983716,
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MogdarTheUndying"]
 anims/Float = SubResource( 1 )
 anims/RESET = SubResource( 2 )
+
+[node name="Bridge" parent="." instance=ExtResource( 6 )]
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 50.8138, 20.7459, -7.56924 )
+
+[node name="Bridge2" parent="." instance=ExtResource( 6 )]
+transform = Transform( 3.1631, 0, 2.44843, -0.257928, 3.97774, 0.333214, -2.4348, -0.421377, 3.1455, 138.115, 21.2851, -41.8958 )
+
+[node name="Bridge3" parent="." instance=ExtResource( 6 )]
+transform = Transform( 2.00701, 0, -3.46005, 0, 4, 0, 3.46005, 0, 2.00701, 79.888, 22.8883, -72.9881 )
+
+[node name="Bridge4" parent="." instance=ExtResource( 6 )]
+transform = Transform( -1.13652, -0.494337, -3.80315, -0.14154, 3.96934, -0.47364, 3.83253, 0, -1.1453, 100.26, 24.3766, 38.6846 )
+
+[node name="Chest" parent="." instance=ExtResource( 8 )]
+transform = Transform( 0.0961759, 0, -0.995364, 0, 1, 0, 0.995364, 0, 0.0961759, 128.689, 26.7098, 58.9659 )
+inv_u_id = 150
+
+[node name="Chest2" parent="." instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -218.939, 8.97336, -44.3212 )
+inv_u_id = 151
+
+[node name="beast" parent="." instance=ExtResource( 7 )]
+transform = Transform( 0.740429, 0, -0.672134, 0, 1, 0, 0.672134, 0, 0.740429, -236.815, 11.9215, -52.6567 )
 
 [connection signal="animation_finished" from="MogdarTheUndying/AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

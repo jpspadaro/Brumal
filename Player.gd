@@ -77,6 +77,11 @@ func _physics_process(delta):
 			if GameData.Player_Speed < 1:
 				get_tree().change_scene("res://LoseGame.tscn")
 			GameData.notify("Your skin hardens, making it harder to move!")
+		if GameData.Player_Wealth > 50:
+			$RotationHelper/Camera.fov -= 10
+			if $RotationHelper/Camera.fov < 1:
+				get_tree().change_scene("res://LoseGame.tscn")
+
 		GameData.Player_HP = 50
 
 

@@ -4,7 +4,7 @@ export var Player_HP = 100 # Humanity Points, not Hit Points
 export var Player_Wealth = 0 # Wealth points (Kinda like a score)
 export var Player_Speed = 8
 
-var notifications = "WASD to move.\nUse mouse to look around. Clicking picks up items.\nQ quits.\nU uses the currently held item. \nI displays inventory. \n\",\" and \".\" navigate through the list.\nVersion: 0.3 alpha"
+var notifications = "WASD to move.\nUse mouse to look around. Clicking picks up items.\nQ quits.\nU uses the currently held item. \nI displays inventory. \n\",\" and \".\" navigate through the list.\nVersion: 0.6 alpha"
 var current_world = "res://Main.tscn"
 
 export var inv_list = ["Liber Avaritiae"]
@@ -17,7 +17,8 @@ var inv_description = {"Liber Avaritiae":"A mystical tome leading to riches, and
 	"Relic Of Grent": "A strange spire relic. Hold it before the portal to travel to forsaken Grent.",
 	"Relic Of Nul": "You feel claustrophobic loss just holding this relic. Hold it to travel to Nul.",
 	"Chest": "Use this to increase your wealth.",
-	"Coin": "Every little bit helps. Use to increase your wealth."
+	"Coin": "Every little bit helps. Use to increase your wealth.",
+	"Mogdar's Bauble": "Given by an immortal being, what does this jewel do?"
 	}
 
 var inv_held = 0
@@ -89,8 +90,15 @@ func death_audio():
 
 func add_relic():
 	curr_relics += 1
+	if curr_relics == total_relics:
+		notify("A surge of confidence quickens you step, as you know you've found all the relics of legend.")
+		Player_Speed = 10
 	notify(String(curr_relics) + " out of " + String(total_relics) + " found.")
 	notify("You have found a relic!")
+
+func switch_scene(scene):
+	get_tree().change_scene("res://LoadingScreen.tscn")
+
 
 func reset_game():
 	Player_HP = 100 # Humanity Points, not Hit Points

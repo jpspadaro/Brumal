@@ -102,7 +102,11 @@ common/enable_pause_aware_picking=true
 [rendering]
 
 quality/driver/driver_name="GLES2"
+threads/thread_model=2
 vram_compression/import_etc=true
 vram_compression/import_etc2=false
+quality/directional_shadow/size=2048
+quality/shadows/filter_mode=0
 quality/shading/use_physical_light_attenuation=true
+quality/reflections/atlas_size=1024
 environment/default_environment="res://default_env.tres"

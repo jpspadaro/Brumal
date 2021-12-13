@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Fonts/Title Font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Images/Loading.png" type="Texture" id=2]
+[ext_resource path="res://LoadingScreen.gd" type="Script" id=3]
+[ext_resource path="res://Fonts/Notification.tres" type="DynamicFont" id=4]
+
+[node name="LoadScene" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1029.0
+margin_bottom = 606.0
+color = Color( 0.317647, 0.313726, 0.313726, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="ColorRect"]
+margin_right = 1028.0
+margin_bottom = 604.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Loading" type="Sprite" parent="ColorRect/CenterContainer"]
+position = Vector2( 511.808, 304.467 )
+scale = Vector2( 1.09422, 0.906819 )
+texture = ExtResource( 2 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/CenterContainer"]
+margin_left = 433.0
+margin_top = 248.0
+margin_right = 595.0
+margin_bottom = 355.0
+
+[node name="Label" type="Label" parent="ColorRect/CenterContainer/VBoxContainer"]
+margin_right = 162.0
+margin_bottom = 90.0
+custom_fonts/font = ExtResource( 1 )
+text = "Loading..."
+
+[node name="ProgressBar" type="ProgressBar" parent="ColorRect/CenterContainer/VBoxContainer"]
+margin_top = 94.0
+margin_right = 162.0
+margin_bottom = 107.0
+custom_fonts/font = ExtResource( 4 )
+rounded = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
