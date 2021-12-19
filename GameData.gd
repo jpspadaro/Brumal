@@ -11,11 +11,14 @@ export var inv_list = ["Liber Avaritiae"]
 var inv_list_all = [0] #Includes items previously used. 
 #Initialized the same to prevent pass by reference later
 
+var narratives_triggered = []
+
 var inv_description = {"Liber Avaritiae":"A mystical tome leading to riches, and also providing the way home.",
 	"Test Box": "A sacred artifact of debugging.",
 	"Relic Of Tongratell": "A sacred relic. Hold it before the portal to travel to Tongratell.",
 	"Relic Of Grent": "A strange spire relic. Hold it before the portal to travel to forsaken Grent.",
 	"Relic Of Nul": "You feel claustrophobic loss just holding this relic. Hold it to travel to Nul.",
+	"Relic Of Dirk": "When you hold this relic, darkness licks at the corners of your mind...",
 	"Chest": "Use this to increase your wealth.",
 	"Coin": "Every little bit helps. Use to increase your wealth.",
 	"Mogdar's Bauble": "Given by an immortal being, what does this jewel do?"
@@ -23,7 +26,7 @@ var inv_description = {"Liber Avaritiae":"A mystical tome leading to riches, and
 
 var inv_held = 0
 
-var total_relics = 3
+var total_relics = 4
 var curr_relics = 0
 
 func _ready():

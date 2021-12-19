@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Main/house/house.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://WorldOfNul/Bridge.tscn" type="PackedScene" id=6]
 [ext_resource path="res://beast.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Chest.tscn" type="PackedScene" id=8]
+[ext_resource path="res://NarrativeArea.tscn" type="PackedScene" id=9]
+[ext_resource path="res://WorldOfNul/RelicOfDirk.tscn" type="PackedScene" id=10]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Float"
@@ -140,13 +142,13 @@ tracks/5/keys = {
 script = ExtResource( 4 )
 
 [node name="Landscape" parent="." instance=ExtResource( 3 )]
-transform = Transform( 300, 0, 0, 0, 300, 0, 0, 0, 300, 0, 0, 0 )
+transform = Transform( 300, 0, 0, 0, 300, 0, 0, 0, 300, -0.226905, 1.15681, 0.591074 )
 
 [node name="house" parent="." instance=ExtResource( 1 )]
 transform = Transform( 0.266115, 0, -0.362881, 0, 0.45, 0, 0.362881, 0, 0.266115, 43.4467, 18.266, 24.8576 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-transform = Transform( -0.259476, 0, -0.965749, 0, 1, 0, 0.965749, 0, -0.259476, 33.5376, 21.426, 9.24769 )
+transform = Transform( -0.259476, 0, -0.965749, 0, 1, 0, 0.965749, 0, -0.259476, 33.5376, 24.51, 9.24769 )
 
 [node name="MogdarTheUndying" parent="." instance=ExtResource( 5 )]
 transform = Transform( -0.983716, 0, 0.179729, 0, 1, 0, -0.179729, 0, -0.983716, 23.1983, 28.7712, 49.1421 )
@@ -177,5 +179,18 @@ inv_u_id = 151
 
 [node name="beast" parent="." instance=ExtResource( 7 )]
 transform = Transform( 0.740429, 0, -0.672134, 0, 1, 0, 0.672134, 0, 0.740429, -236.815, 11.9215, -52.6567 )
+
+[node name="NarrativeArea" parent="." instance=ExtResource( 9 )]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 145.834, 24.9837, -32.4819 )
+narrative_text = "These strange worlds. Bloch knew more about them. If it weren't for the poison..."
+narrative_title = "Nul_Bloch"
+
+[node name="NarrativeArea2" parent="." instance=ExtResource( 9 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -1.57071, 21.3627, 40.3574 )
+narrative_text = "You notice comething in the distance, far ahead."
+narrative_title = "Nul_Forward"
+
+[node name="RelicOfDirk" parent="." instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 108.724, 30.3778, -77.5176 )
 
 [connection signal="animation_finished" from="MogdarTheUndying/AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

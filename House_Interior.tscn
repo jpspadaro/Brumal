@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://House_Interior.gd" type="Script" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Images/Untitled.png" type="Texture" id=8]
 [ext_resource path="res://House_Interior/Desk.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Images/Loading.png" type="Texture" id=10]
+[ext_resource path="res://NarrativeArea.tscn" type="PackedScene" id=11]
 
 [sub_resource type="PlaneMesh" id=1]
 
@@ -29,11 +30,16 @@ transform = Transform( 0.0489369, 0, 0.998802, 0, 1, 0, -0.998802, 0, 0.0489369,
 
 [node name="House_Interior" parent="." instance=ExtResource( 3 )]
 
+[node name="NarrativeArea" parent="House_Interior" instance=ExtResource( 11 )]
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, -10.925, 0.57161, 9.67528 )
+narrative_text = "Four bunks...now only one is needed. You saw to that."
+narrative_title = "Interior_Bunks"
+
 [node name="Door" parent="." instance=ExtResource( 4 )]
 transform = Transform( 0.5, 0, 0, 0, 0.45, 0, 0, 0, 0.45, 19.5456, -1.00969, 0 )
 
 [node name="Fireplace2" parent="." instance=ExtResource( 5 )]
-transform = Transform( 0.00120428, 0, -0.999999, 0, 1, 0, 0.999999, 0, 0.00120428, -6.70413, 0.610451, 1.01729 )
+transform = Transform( 0.00120428, 0, -0.999999, 0, 1, 0, 0.999999, 0, 0.00120428, -4.71862, 0.610451, 1.01729 )
 
 [node name="Fireplace" parent="." instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.302384, 0.558847, 4.33832 )
@@ -42,7 +48,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.302384, 0.558847, 4.33832 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.85753, 0.575, -3.38356 )
 
 [node name="Bed" parent="." instance=ExtResource( 6 )]
-transform = Transform( -0.0196861, 0, -0.999806, 0, 1, 0, 0.999806, 0, -0.0196861, -11.4828, 0.919037, 6.0569 )
+transform = Transform( -0.0196861, 0, -0.999806, 0, 1, 0, 0.999806, 0, -0.0196861, -11.5836, 0.919037, 4.468 )
 
 [node name="WallPicture" type="MeshInstance" parent="."]
 transform = Transform( -7.92587e-08, -1, 0, -7.92587e-08, 1.91069e-15, -1.81323, 1.81323, -4.37114e-08, -7.92587e-08, -1.55098, 3.33706, 5.26801 )
@@ -50,9 +56,18 @@ mesh = SubResource( 1 )
 material/0 = SubResource( 2 )
 
 [node name="Desk" parent="." instance=ExtResource( 9 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.3712, 1.375, -8.69027 )
+transform = Transform( 1, 0, 0, 0, 0.75, 0, 0, 0, 1, 11.3712, 1.17278, -8.69027 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
 transform = Transform( -3.07199, 8.74228e-08, 0, 1.17392e-14, 4.37114e-08, -1.83363, -2.68562e-07, -1, -8.01504e-08, 8.31496, 3.21748, -7.05456 )
 mesh = SubResource( 3 )
 material/0 = SubResource( 4 )
+
+[node name="Bed2" parent="." instance=ExtResource( 6 )]
+transform = Transform( -0.0196861, 0, -0.999806, 0, 1, 0, 0.999806, 0, -0.0196861, -11.5836, 3.55952, 4.468 )
+
+[node name="Bed3" parent="." instance=ExtResource( 6 )]
+transform = Transform( 0.994703, 0, -0.102793, 0, 1, 0, 0.102793, 0, 0.994703, -11.5836, 0.919037, 11.2366 )
+
+[node name="Bed4" parent="." instance=ExtResource( 6 )]
+transform = Transform( 0.994703, 0, -0.102793, 0, 1, 0, 0.102793, 0, 0.994703, -11.5836, 3.55952, 11.2366 )

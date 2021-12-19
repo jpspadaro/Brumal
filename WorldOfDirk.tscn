@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://WorldOfDirk/layout.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Main/house/house.tscn" type="PackedScene" id=3]
+
+[node name="WorldOfDirk" type="Spatial"]
+
+[node name="house" parent="." instance=ExtResource( 3 )]
+transform = Transform( -0.0190872, 0, -0.449595, 0, 0.45, 0, 0.449595, 0, -0.0190872, 0.565086, -10.9976, 85.3904 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0993, -5.63173, 62.3156 )
+
+[node name="layout" parent="." instance=ExtResource( 1 )]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0 )

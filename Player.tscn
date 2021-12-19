@@ -30,7 +30,7 @@ script = ExtResource( 1 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.781837, -0.782127 )
 
 [node name="Camera" type="Camera" parent="RotationHelper"]
-far = 1004.2
+near = 1.0
 
 [node name="RayCast" type="RayCast" parent="RotationHelper/Camera"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.473825 )

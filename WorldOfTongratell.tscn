@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://WorldOfTongratell/Landscape.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Main/house/house.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Coin.tscn" type="PackedScene" id=8]
 [ext_resource path="res://ShadowSheet.tscn" type="PackedScene" id=9]
 [ext_resource path="res://WorldOfTongratell.gd" type="Script" id=10]
+[ext_resource path="res://NarrativeArea.tscn" type="PackedScene" id=11]
 
 [sub_resource type="BoxShape" id=1]
 
@@ -60,5 +61,10 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -37.098, 9.43002, -8.92583 )
 
 [node name="ShadowSheet2" parent="." instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -47.1786, 13.3536, 45.5374 )
+
+[node name="NarrativeArea" parent="." instance=ExtResource( 11 )]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 30.8966, 14.1969, 36.8612 )
+narrative_text = "A taste of the treasure that waits...this is what makes offing Reynold, Thompson, and Bloch worth it."
+narrative_title = "Tongratell_Treasure"
 
 [connection signal="animation_finished" from="OmniLight/AnimationPlayer" to="OmniLight" method="_on_AnimationPlayer_animation_finished"]

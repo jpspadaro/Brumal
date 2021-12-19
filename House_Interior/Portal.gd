@@ -34,3 +34,7 @@ func _on_Portal_Area_body_entered(body):
 			GameData.current_world = "res://WorldOfNul.tscn"
 			GameData.notify("The world outside storms, then goes quiet. You feel like you are in a different place.")
 			$Portal_Area/AudioStreamPlayer.play(23.0)
+		if GameData.inv_list[GameData.inv_held] == "Relic Of Dirk":
+			GameData.current_world = "res://WorldOfDirk.tscn"
+			GameData.notify("The world outside buzzes, then the sound fades. You feel like you are in a different place.")
+			$Portal_Area/AudioStreamPlayer.play(23.0)

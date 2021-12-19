@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://WorldOfGrent/landscape.tscn" type="PackedScene" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://beast.tscn" type="PackedScene" id=9]
 [ext_resource path="res://House_Interior/Stone.tres" type="Material" id=10]
 [ext_resource path="res://WorldOfGrent/RelicOfNul.tscn" type="PackedScene" id=11]
+[ext_resource path="res://NarrativeArea.tscn" type="PackedScene" id=12]
 
 [sub_resource type="CubeMesh" id=1]
 material = ExtResource( 10 )
@@ -77,5 +78,10 @@ inv_u_id = 141
 
 [node name="beast" parent="." instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.4085, 404.159, -156.491 )
+
+[node name="NarrativeArea" parent="." instance=ExtResource( 12 )]
+transform = Transform( 50, 0, 0, 0, 0, 0, 0, 0, 25, 94.6414, 403.416, -17.7615 )
+narrative_text = "These chasms...such depths. Much deeper than the cliff you pushed Thompson off of on the way back to the cabin. Bloch would have something to say about how to get out."
+narrative_title = "Grent_Chasms"
 
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_finished"]

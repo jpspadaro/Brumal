@@ -6,6 +6,7 @@ extends Area
 # var b = "text"
 
 export var narrative_text = ""
+export var narrative_title = ""
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -14,7 +15,9 @@ func _ready():
 
 func _on_NarrativeArea_body_entered(body):
 	if body.is_in_group("Player"):
-		GameData.notify(narrative_text)
+		if not narrative_title in GameData.narratives_triggered:
+			GameData.notify(narrative_text)
+			GameData.narratives_triggered.append(narrative_title)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
