@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Main/mountain.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Main/Barrier_wall_mat.tres" type="Material" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://original_models/terrain/Material.material" type="Material" id=6]
 [ext_resource path="res://Main/house/house.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Main/RelicOfTongratell.tscn" type="PackedScene" id=8]
+[ext_resource path="res://NarrativeArea.tscn" type="PackedScene" id=9]
 
 [sub_resource type="SphereMesh" id=1]
 material = ExtResource( 6 )
@@ -127,3 +128,7 @@ transform = Transform( -0.46899, 0, -0.173345, 0, 0.5, 0, 0.173345, 0, -0.46899,
 
 [node name="RelicOfTongratell" parent="." instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 24.8712, -41.8363 )
+
+[node name="NarrativeArea" parent="." instance=ExtResource( 9 )]
+transform = Transform( 20, 0, 0, 0, 20, 0, 0, 0, 20, -6.05029, 24.871, -41.836 )
+narrative_text = "You remember Reynold dropping something running through the snow. It was somewhere around here..."
