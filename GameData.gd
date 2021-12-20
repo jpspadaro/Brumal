@@ -109,7 +109,7 @@ func reset_game():
 	Player_Wealth = 0 # Wealth points (Kinda like a score)
 	Player_Speed = 8
 
-	notifications = "WASD to move.\nUse mouse to look around. Clicking picks up items.\nQ quits.\nU uses the currently held item. \nI displays inventory. \n\",\" and \".\" navigate through the list.\nVersion: 0.3 alpha"
+	notifications = "WASD to move.\nUse mouse to look around. Clicking picks up items.\nQ quits.\nU uses the currently held item. \nI displays inventory. \n\",\" and \".\" navigate through the list.\nVersion: 0.9 beta"
 	current_world = "res://Main.tscn"
 
 	inv_list = ["Liber Avaritiae"]

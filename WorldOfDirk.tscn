@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://WorldOfDirk/layout.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://ShadowSheet.tscn" type="PackedScene" id=6]
 [ext_resource path="res://WorldOfDirk.gd" type="Script" id=7]
 [ext_resource path="res://WorldOfDirk/RelicOfId.tscn" type="PackedScene" id=8]
+[ext_resource path="res://NarrativeArea.tscn" type="PackedScene" id=9]
 
 [node name="WorldOfDirk" type="Spatial"]
 script = ExtResource( 7 )
@@ -42,3 +43,13 @@ Speed = 3
 
 [node name="RelicOfId" parent="." instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 142.307, -6.4888, 31.249 )
+
+[node name="NarrativeArea" parent="." instance=ExtResource( 9 )]
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, -255.167, 4.21014, 187.412 )
+narrative_text = "A sense of forboding fills you. Was it worth it all? You can sense the last relic is near."
+narrative_title = "Dirk_Forboding"
+
+[node name="NarrativeArea2" parent="." instance=ExtResource( 9 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 171.677, 3.29408, -0.212919 )
+narrative_text = "Deeper into the maze. Farther from what you did..."
+narrative_title = "Dirk_Deeper"
