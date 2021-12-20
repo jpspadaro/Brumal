@@ -19,6 +19,7 @@ var inv_description = {"Liber Avaritiae":"A mystical tome leading to riches, and
 	"Relic Of Grent": "A strange spire relic. Hold it before the portal to travel to forsaken Grent.",
 	"Relic Of Nul": "You feel claustrophobic loss just holding this relic. Hold it to travel to Nul.",
 	"Relic Of Dirk": "When you hold this relic, darkness licks at the corners of your mind...",
+	"Relic Of Id": "The strange golden skull whispers from your pack.",
 	"Chest": "Use this to increase your wealth.",
 	"Coin": "Every little bit helps. Use to increase your wealth.",
 	"Mogdar's Bauble": "Given by an immortal being, what does this jewel do?"
@@ -26,7 +27,7 @@ var inv_description = {"Liber Avaritiae":"A mystical tome leading to riches, and
 
 var inv_held = 0
 
-var total_relics = 4
+var total_relics = 5
 var curr_relics = 0
 
 func _ready():

@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://WorldOfId/landscape.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://WorldOfNul/MogdarTheUndying.tscn" type="PackedScene" id=3]
+[ext_resource path="res://WorldOfId.gd" type="Script" id=4]
+
+[node name="WorldOfId" type="Spatial"]
+script = ExtResource( 4 )
+
+[node name="landscape" parent="." instance=ExtResource( 1 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 95.032, 394.476, 140.743 )
+
+[node name="MogdarTheUndying" parent="." instance=ExtResource( 3 )]
+transform = Transform( 17.8112, 0, 9.09722, 0, 20, 0, -9.09722, 0, 17.8112, 0, 427.029, 29.3772 )
+endgame = true

@@ -84,3 +84,11 @@ autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Label" type="Label" parent="ColorRect"]
+margin_left = 5.0
+margin_top = 565.0
+margin_right = 240.0
+margin_bottom = 596.0
+text = "A game by Jason Spadaro, 2021.
+Submission to Themed Horror Jam 3."
