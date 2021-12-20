@@ -92,3 +92,6 @@ margin_right = 240.0
 margin_bottom = 596.0
 text = "A game by Jason Spadaro, 2021.
 Submission to Themed Horror Jam 3."
+__meta__ = {
+"_edit_use_anchors_": false
+}

@@ -4,7 +4,7 @@ export var Player_HP = 100 # Humanity Points, not Hit Points
 export var Player_Wealth = 0 # Wealth points (Kinda like a score)
 export var Player_Speed = 8
 
-var notifications = "WASD to move.\nUse mouse to look around. Clicking picks up items.\nQ quits.\nU uses the currently held item. \nI displays inventory. \n\",\" and \".\" navigate through the list.\nVersion: 0.6 alpha"
+var notifications = "WASD to move.\nUse mouse to look around. Clicking picks up items.\nQ quits.\nU uses the currently held item. \nI displays inventory. \n\",\" and \".\" navigate through the list.\nVersion: 0.9 beta"
 var current_world = "res://Main.tscn"
 
 export var inv_list = ["Liber Avaritiae"]
@@ -111,7 +111,7 @@ func reset_game():
 
 	notifications = "WASD to move.\nUse mouse to look around. Clicking picks up items.\nQ quits.\nU uses the currently held item. \nI displays inventory. \n\",\" and \".\" navigate through the list.\nVersion: 0.9 beta"
 	current_world = "res://Main.tscn"
-
+	
 	inv_list = ["Liber Avaritiae"]
 	inv_list_all = [0] #Includes items previously used. 
 	#Initialized the same to prevent pass by reference later

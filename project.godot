@@ -104,11 +104,13 @@ common/enable_pause_aware_picking=true
 [rendering]
 
 quality/driver/driver_name="GLES2"
+quality/intended_usage/framebuffer_allocation=3
+quality/intended_usage/framebuffer_allocation.mobile=1
 threads/thread_model=2
 vram_compression/import_etc=true
 vram_compression/import_etc2=false
-quality/directional_shadow/size=1024
-quality/directional_shadow/size.mobile=1024
+quality/directional_shadow/size=256
+quality/directional_shadow/size.mobile=256
 quality/shadows/filter_mode=0
 quality/shading/force_vertex_shading=true
 quality/shading/force_lambert_over_burley=true
